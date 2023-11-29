@@ -1,4 +1,6 @@
 const math = require("./add.js");
+const data = require("./data.json");
+console.log(data.address);
 
 console.log(math.add(4, 5));
 console.log(math.subtract(7, 5));
