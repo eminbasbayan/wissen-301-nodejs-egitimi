@@ -1,34 +1,24 @@
-const math = require("./add.js");
-const data = require("./data.json");
-console.log(data.address);
+const path = require("node:path");
 
-console.log(math.add(4, 5));
-console.log(math.subtract(7, 5));
+console.log(__filename);
+console.log(__dirname);
 
-let obj1 = { name: "Emin Başbayan" };
-let obj2 = obj1;
-// obj2.name = "Nur Başbayan";
-console.log(obj1.name);
+// console.log(path.basename(__filename));
+// console.log(path.basename(__dirname));
 
-obj2 = { name: "Nur Başbayan" };
-console.log(obj2.name);
+// console.log(path.extname(__filename));
+// console.log(path.extname(__dirname));
 
-// const SuperHero = require("./super-hero.js");
+// console.log(path.parse(__filename));
+// console.log(path.format(path.parse(__filename)));
 
-// const superman = new SuperHero("Superman");
+// console.log(path.isAbsolute(__filename));
+// console.log(path.isAbsolute("./add.js"));
 
-// console.log(superman.getName());
+// console.log(path.join("folder1", "folder2", "index.html"));
+// console.log(path.join("/folder1", "folder2", "index.html"));
+// console.log(path.join("/folder1", "//folder2", "index.html"));
+// console.log(path.join("/folder1", "//folder2", "../index.html"));
 
-// const superHero = require("./super-hero");
-
-// console.log(superHero.getName());
-
-// superHero.setName("Superman");
-
-// console.log(superHero.getName());
-
-// delete require.cache[require.resolve("./super-hero")];
-
-// const newSuperHero = require("./super-hero");
-
-// console.log(newSuperHero.getName());
+console.log(path.resolve("folder1", "folder2", "index.html"));
+console.log(path.resolve("/folder1", "folder2", "index.html"));
