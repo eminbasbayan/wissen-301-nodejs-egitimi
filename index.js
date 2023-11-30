@@ -1,11 +1,11 @@
-const hello = (name) => {
- console.log(`Hello ${name}`);
-}
+const EventEmitter = require("node:events");
+const emitter = new EventEmitter();
 
 
-const helloName = (first, callback) =>{
-    const name = "Emin"
-    callback(name)
-}
+emitter.on("orderPizza", (size, topping)=>{
+     console.log(`Bir ${size} ve ${topping} ile pişiriliyor.`);
+})
 
-helloName(hello)
+
+emitter.emit("orderPizza", "large", "mantar");
+
