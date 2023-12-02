@@ -2,8 +2,12 @@ const http = require("node:http");
 const fs = require("node:fs");
 
 const server = http.createServer((request, response) => {
+  const name = "Emin";
+
   response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-  fs.createReadStream(__dirname + "/index.html").pipe(response);
+  let html = fs.readFileSync("./index.html", "utf-8");
+  html = html.replace("{{name}}", name)
+  response.end(html);
 });
 
 server.listen(5000, () => {
