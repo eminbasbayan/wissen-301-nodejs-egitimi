@@ -1,39 +1,13 @@
-const fs = require("node:fs");
+const http = require("node:http");
 
-// Senkron dosya okuma
-// const txtFile = fs.readFileSync("./file.txt", "utf-8");
-// console.log(txtFile);
+const server = http.createServer((request, response)=>{
+    response.writeHead(300, {"Content-Type": "text/plain"})
+    response.end("Hello World!")
+}) 
 
-// Asenkron dosya okuma
-// console.log("first");
-// fs.readFile("./file.txt", (err, data) => {
-//   setTimeout(() => {
-//     if (err) {
-//       console.log("Dosya okunurken bir hata oluştur:" + err);
-//     } else {
-//       console.log(data.toString());
-//     }
-//   }, 3000);
-// });
-// console.log("second");
 
-// Senkron dosya yazdırma
-// fs.writeFileSync("./file2.txt", "Hello World!!!!");
+server.listen(5000, ()=>{
+  console.log("Sunucu 5000 portu üzerinde çalışıyor.");
+})
 
-// Asenkron dosya yazdırma
-// fs.writeFile("./file.txt", "Hello", (err) => {
-//   if (err) {
-//     console.log("Dosya okunurken bir hata oluştur:" + err);
-//   } else {
-//     console.log("Dosya yazdırma işlemi başarılı!");
-//   }
-// });
 
-// Yazıyı sonuna ekleme
-fs.writeFile("./file.txt", " World!", { flag: "a" }, (err) => {
-  if (err) {
-    console.log("Dosya okunurken bir hata oluştur:" + err);
-  } else {
-    console.log("Dosya yazdırma işlemi başarılı!");
-  }
-});
