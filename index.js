@@ -1,13 +1,15 @@
 const http = require("node:http");
 
-const server = http.createServer((request, response)=>{
-    response.writeHead(300, {"Content-Type": "text/plain"})
-    response.end("Hello World!")
-}) 
+const server = http.createServer((request, response) => {
+  const customer = {
+    firstName: "Emin",
+    lastName: "Başbayan"
+  }
 
+  response.writeHead(300, { "Content-Type": "application/json" });
+  response.end(JSON.stringify(customer));
+});
 
-server.listen(5000, ()=>{
+server.listen(5000, () => {
   console.log("Sunucu 5000 portu üzerinde çalışıyor.");
-})
-
-
+});
