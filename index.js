@@ -1,13 +1,10 @@
 const http = require("node:http");
+const fs = require("node:fs");
 
 const server = http.createServer((request, response) => {
-  const customer = {
-    firstName: "Emin",
-    lastName: "Başbayan"
-  }
-
-  response.writeHead(300, { "Content-Type": "application/json" });
-  response.end(JSON.stringify(customer));
+  const html = fs.readFileSync("./index.html", "utf-8");
+  response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+  response.end(html);
 });
 
 server.listen(5000, () => {
