@@ -6,6 +6,9 @@ const PORT = process.env.PORT || 5500;
 // content-type application/x-www-form-urlendcoded
 app.use(express.urlencoded({ extended: false }));
 
+// built-in middleware form json
+app.use(express.json());
+
 // server static files
 app.use(express.static(path.join(__dirname, "/public")));
 
