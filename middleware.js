@@ -3,6 +3,9 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 5500;
 
+// server static files
+app.use(express.static(path.join(__dirname, "/public")))
+
 app.get("^/$|/index(.html)?", (req, res) => {
   //   res.send("Hello World!");
   // res.sendFile("./views/index.html", {root: __dirname})
