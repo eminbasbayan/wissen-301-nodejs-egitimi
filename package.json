@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node middleware.js",
-    "dev": "nodemon middleware.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon middleware.js"
   },
   "keywords": [],
   "author": "",
