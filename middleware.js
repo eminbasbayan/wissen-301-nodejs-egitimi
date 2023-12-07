@@ -1,23 +1,28 @@
 const express = require("express");
 const path = require("path");
-const cors = require("cors")
+const cors = require("cors");
 const app = express();
+const errorHandler = require("./middleware/errorHandler");
 const PORT = process.env.PORT || 5500;
 
-const whiteList = ["https://www.google.com", "http://127.0.0.1:5500", "http://localhost:5500"]
+const whiteList = [
+  "https://www.google.com",
+  "http://127.0.0.1:5500",
+  "http://localhost:5500",
+];
 
 const corsOptions = {
-    origin: (origin, callback)=>{
-      if(whiteList.indexOf(origin) !== -1 || !origin){
-          callback(null, true)
-      }else{
-        callback(new Error("Bu adrese izin verilmedi."))
-      }
+  origin: (origin, callback) => {
+    if (whiteList.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Bu adrese izin verilmedi."));
     }
-}
+  },
+};
 
 // Cross Origin Resource Sharing
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
 
 // content-type application/x-www-form-urlendcoded
 app.use(express.urlencoded({ extended: false }));
@@ -77,6 +82,8 @@ app.get("/chain", [one, two, three]);
 app.all("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
+
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
