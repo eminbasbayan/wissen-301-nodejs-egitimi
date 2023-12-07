@@ -9,7 +9,7 @@ const logEvents = async (message, fileName) => {
   const dateTime = `${format(new Date(), "yyyyMMdd\tHH:mm:ss")}`;
   const logItem = `${dateTime}\t${uuid()}\t${message}`;
   try {
-    if (!fs.existsSync(__dirname, "..", "logs")) {
+    if (!fs.existsSync(path.join(__dirname, "..", "logs"))) {
       await fsPromises.mkdir(path.join(__dirname, "..", "logs"));
     }
     await fsPromises.appendFile(
@@ -21,6 +21,4 @@ const logEvents = async (message, fileName) => {
   }
 };
 
-logEvents("Hello", "deneme.txt");
-
-// module.exports = logEvents;
+module.exports = logEvents;
