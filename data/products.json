@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "productName": "Elma",
+    "category": "Meyve",
+    "price": 5.66
+  },
+  {
+    "id": 2,
+    "productName": "Kitap",
+    "category": "Eğitim",
+    "price": 25.56
+  },
+  {
+    "id": 3,
+    "productName": "Ceket",
+    "category": "Giyim",
+    "price": 1600.66
+  }
+]
