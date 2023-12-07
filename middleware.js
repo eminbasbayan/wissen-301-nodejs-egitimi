@@ -3,6 +3,7 @@ const path = require("path");
 const cors = require("cors");
 const app = express();
 const errorHandler = require("./middleware/errorHandler");
+const reqHandler = require("./middleware/reqHandler");
 const PORT = process.env.PORT || 5500;
 
 const whiteList = [
@@ -10,6 +11,8 @@ const whiteList = [
   "http://127.0.0.1:5500",
   "http://localhost:5500",
 ];
+
+app.use(reqHandler);
 
 const corsOptions = {
   origin: (origin, callback) => {
