@@ -46,3 +46,15 @@
 20231207	21:59:43	75eb1463-d975-4822-bf2c-cbdfddebb729	GET	undefined	/products/2
 20231207	21:59:58	c58c18ad-76d4-4afb-8620-79f1f1a1242d	GET	undefined	/products/2
 20231207	22:00:35	2ece7088-24be-47ec-b01a-d4b0a0aa9ae4	GET	undefined	/products/2
+20231208	19:17:13	5eba93cc-9c90-40ea-8738-119c7c6c35d4	GET	undefined	/
+20231208	19:17:13	0e7d07e2-ce11-440a-bd1c-590251b0fac9	GET	undefined	/img/download.png
+20231208	19:17:13	bce2d9c0-3e3b-45f1-854c-bd5c33212c46	GET	undefined	/css/style.css
+20231208	19:17:15	56d7a2c9-7673-4a43-a14e-8f005a795f1f	GET	undefined	/products
+20231208	19:17:15	0d9bbc84-7b45-436c-b12e-f21e4d9c44b4	GET	undefined	/favicon.ico
+20231208	19:18:19	16744748-ffdf-45eb-af24-757cd49c159e	GET	undefined	/products
+20231208	19:18:20	ef4c74d4-185a-4a23-b356-b1a9b53a7b3a	GET	undefined	/images/icons/gear.png
+20231208	19:22:02	524f5e9c-bfb2-4247-8392-ff213aa8c664	GET	undefined	/products
+20231208	19:30:24	d8333ea4-79c2-4c5f-b67c-a2e1c853d0c0	GET	undefined	/products
+20231208	19:30:32	a4704e14-e045-439a-a9ad-654b7e8cf268	GET	undefined	/products
+20231208	19:32:09	1ed4c03f-a205-4710-9593-e4f67dbc2159	POST	undefined	/products
+20231208	19:39:15	b7f235d8-d377-4307-8748-1db3df8ba539	DELETE	undefined	/products
