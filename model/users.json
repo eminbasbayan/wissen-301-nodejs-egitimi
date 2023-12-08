@@ -1,4 +1,10 @@
 [
-  { "username": "eminbasbayan", "password": "ASDasdASD'!âsdASd" },
-  { "username": "eminbasbayan1", "password": "ASDasdASD'!âsdASd" }
+  {
+    "username": "eminbasbayan1",
+    "password": "$2b$10$Uk4j/2eLY2QCbNmI6UzcTu9mEK/IcmfMw9G7oiIySd.xXkztkcfSa"
+  },
+  {
+    "username": "eminbasbayan",
+    "password": "$2b$10$vdFl3eeq3Zrs/OQfNG25x.wXLtYnC4r5MNT70OE3SASATvHLQIhmS"
+  }
 ]

@@ -7,6 +7,7 @@ const usersDB = {
 
 const fsPromises = require("fs").promises;
 const path = require("path");
+const bcrypt = require("bcrypt");
 
 const handleNewUser = async (req, res) => {
   const { user: newUsername, pwd } = req.body;
@@ -23,7 +24,9 @@ const handleNewUser = async (req, res) => {
   );
   if (duplicate) return res.sendStatus(409);
   try {
-    const newUser = { username: newUsername, password: pwd };
+    // encrypt the password
+    const hashedPwd = await bcrypt.hash(pwd, 10);
+    const newUser = { username: newUsername, password: hashedPwd };
     usersDB.setUsers([...usersDB.users, newUser]);
     await fsPromises.writeFile(
       path.join(__dirname, "..", "model", "users.json"),
