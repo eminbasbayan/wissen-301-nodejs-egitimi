@@ -39,6 +39,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.use("/", require("./routes/route.js"));
 app.use("/products", require("./routes/api/products.js"))
 app.use("/register", require("./routes/register.js"))
+app.use("/login", require("./routes/login.js"))
 
 app.all("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
